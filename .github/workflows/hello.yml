@@ -8,5 +8,5 @@ jobs:
 
     steps:
       -name: Display message
-       run: echo "Hello from github actions"
+      run: echo "Hello github action"
 
