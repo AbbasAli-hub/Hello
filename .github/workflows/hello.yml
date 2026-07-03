@@ -4,9 +4,8 @@ on: push
 
 jobs:
   hello:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
-      -name: Display message
-      run: echo "Hello github action"
-
+      - name: Print message
+        run: echo "Hello from gitHub action"
