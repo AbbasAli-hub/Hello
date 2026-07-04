@@ -1,11 +1,23 @@
-name: Hello Workflow
+name: Multiple Jobs Workflow
 
-on: push
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
-  hello:
+  job1:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print message
-        run: echo "Hello from gitHub action"
+        run: |
+          echo "Building Application..."
+          exit 1
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Testing failures"
