@@ -12,7 +12,6 @@ jobs:
       - name: Print message
         run: |
           echo "Building Application..."
-          exit 1
 
   job2:
     needs: job1
